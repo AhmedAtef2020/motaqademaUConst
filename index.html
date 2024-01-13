@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Elite</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding-bottom: 30px;
+        }
+
+        .construction {
+            position: relative;
+            /* width: 100%; */
+            max-height: 80vh;
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+
+        /* .construction img {
+            height: 80vh;
+        } */
+
+        .plant img {
+            animation: 2.5s ease-in-out infinite plantMove;
+            transform-origin: bottom center;
+            width: 100%;
+        }
+
+        .plant {
+            width: 150px;
+            /* height: 200px; */
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-220%);
+            z-index: -1;
+            /* animation: 2.5s ease-in-out infinite plantMove; */
+        }
+
+        .big,
+        .small {
+            max-width: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .small {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .small {
+                display: block;
+            }
+
+            .big {
+                display: none;
+            }
+
+            .plant {
+                display: none;
+            }
+        }
+
+        @keyframes plantMove {
+
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="images/muConstruction.png" alt="construction" class="construction">
+        <div class="plant">
+            <img src="images/muPlant.png" alt="plant">
+
+        </div>
+
+    </div>
+    <div class="contacts">
+        <img class="big" src="images/muContacts1.png" alt="contacts">
+        <img class="small" src="images/muContacts2.png" alt="contacts">
+    </div>
+</body>
+
+</html>
